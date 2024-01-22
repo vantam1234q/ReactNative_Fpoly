@@ -1,7 +1,14 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
+import ListCourse from '../../components/list';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Lab4 = () => {
-  return <Text>Đây là Lab 4 </Text>;
+  return(
+    <View>
+      <ListCourse/>
+    </View>
+  );
 };
 export default Lab4;
