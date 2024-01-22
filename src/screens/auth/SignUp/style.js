@@ -30,4 +30,18 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 150,
   },
+  container1 : {
+    flexDirection : 'row',
+  },
+  title2: {
+    fontSize: 15,
+    textDecorationLine : 'underline',
+    fontWeight: 'bold',
+    padding: 10 ,
+    marginTop: 10,
+    marginRight : -19,
+    marginLeft : 90,
+    color : 'black',
+    textAlign: 'center',
+  },
 });

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {styles} from './styles';
-import {Image, ImageBackground, Text, View} from 'react-native';
+import {Image, ImageBackground, Pressable, Text, View} from 'react-native';
 import Input from '../../../components/input1';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Button1 from '../../../components/Button1';
@@ -18,7 +18,12 @@ const SigIn = () => {
         <Input placeholder={"abc@gmai.com"}></Input>
         <Input placeholder={"*****"}/>
         <Button1 title={"Log In"}></Button1>
-     
+        <Text style={[styles.title1, styles.innerTitleOr]}>OR</Text>
+        <View style={styles.container1}>
+        <Text style={styles.title2 }>Don't have an account? </Text>
+        <Button2 title={"Sign Up"}></Button2>
+        </View>
+        
     </View>
   );
 };

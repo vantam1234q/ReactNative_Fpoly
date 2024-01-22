@@ -15,17 +15,17 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return(
-    <ViewComponent/>
+    // <ViewComponent/>
     
-  //   // // <Lab4 />
-  //   <NavigationContainer >
-  //     <Stack.Navigator>
-  //       <Stack.Screen name='Home' component={Splash} />
-  //       <Stack.Screen name='SignIn' component={SigUp} />
-  //       <Stack.Screen name='SignUp' component={SigIn} />
-  //     </Stack.Navigator>
+    // <Lab4 />
+      <NavigationContainer >
+        <Stack.Navigator>
+          <Stack.Screen name='Home' component={Splash} />
+          <Stack.Screen name='Sign In' component={SigUp} />
+          <Stack.Screen name='Sign Up' component={SigIn} />
+        </Stack.Navigator>
 
-  //   </NavigationContainer>
+      </NavigationContainer>
    );
 };
 

@@ -27,15 +27,25 @@ export const styles = StyleSheet.create({
     color : 'black',
     textAlign: 'center',
   },
-  innerTitle: {
+  title2: {
+    fontSize: 15,
+    textDecorationLine : 'underline',
+    fontWeight: 'bold',
+    padding: 10 ,
     marginTop: 10,
-    fontSize: 18,
-    marginRight: 120,
+    marginRight : -19,
+    marginLeft : 90,
+    color : 'black',
+    textAlign: 'center',
   },
+  
   row: {
     marginTop: 30,
     justifyContent: 'space-between',
     marginLeft: 20,
     width: '100%',
   },
+  container1 : {
+  flexDirection : 'row',
+},
 });

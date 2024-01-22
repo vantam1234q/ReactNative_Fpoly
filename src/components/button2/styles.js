@@ -4,6 +4,9 @@
 
 
 export const styles = StyleSheet.create({
+    container :{
+        marginTop : 10,
+    },
     textContent : {
         color : 'red',
         textAlign : 'center',
