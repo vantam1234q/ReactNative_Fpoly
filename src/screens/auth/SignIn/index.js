@@ -23,7 +23,6 @@ const SigIn = () => {
         <Text style={styles.title2 }>Don't have an account? </Text>
         <Button2 title={"Sign Up"}></Button2>
         </View>
-        
     </View>
   );
 };

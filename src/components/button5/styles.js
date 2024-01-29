@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -7,15 +8,16 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
     },
     loginButton: {
-      backgroundColor: '#2D4990',
+      backgroundColor: 'white',
       padding: 10,
       height:55,
-      width: 196,
-      marginTop: 200,
-      borderRadius: 10,
+      width: 170,
+      marginTop: 50,
+      borderRadius: 5,
+      marginRight: 180,
     },
     buttonText: {
-      color: '#fff',
+      color: 'black',
       height:30,
       textAlign:'center',
       fontSize: 24,

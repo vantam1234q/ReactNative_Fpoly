@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     marginTop: 10,
     textAlign: 'center',
-    color : 'black'
+    color : 'black',
   },
   innerTitle: {
     marginTop: 10,
