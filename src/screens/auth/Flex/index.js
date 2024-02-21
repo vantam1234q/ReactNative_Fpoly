@@ -37,7 +37,6 @@ const Flex = ({navigation}) => {
       <View style={styles.footer}>
       <Text style={styles.footer1}>$100/ Ngày</Text>
       <Button6 onPress={() => navigation.navigate('Lab5')}></Button6>
-        
       </View>
     </View>
   );

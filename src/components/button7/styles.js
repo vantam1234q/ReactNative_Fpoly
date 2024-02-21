@@ -1,23 +1,29 @@
-import { StyleSheet } from "react-native";
+/* eslint-disable prettier/prettier */
+import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    loginButton: {
-      backgroundColor: '#2D4990',
-      padding: 10,
-      height:55,
-      width: 196,
-      borderRadius: 10,
-    },
-    buttonText: {
-      color: '#fff',
-      height:30,
-      textAlign:'center',
-      fontSize: 24,
-      fontWeight: 'bold',
-    },
-  });
+  container: {
+    backgroundColor: '#4F63AC',
+    paddingVertical: 20,
+    paddingHorizontal: 8,
+    borderRadius: 15,
+    marginLeft : 110,
+    width : '40%',
+    marginTop : 10,
+    paddingTop : 13,
+
+  },
+  textContent: {
+    textAlign: 'center',
+    fontSize: 15,
+    color: '',
+    fontWeight: 'bold',
+  },
+   footerText: {
+    color: '#4F63AC',
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 20,
+  },
+});

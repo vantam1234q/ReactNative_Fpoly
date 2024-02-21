@@ -1,21 +1,18 @@
-import React from 'react';
-import {styles} from './styles'
-import { View, Text, TouchableOpacity } from 'react-native';
+/* eslint-disable prettier/prettier */
+import React from "react";
+import { Alert, Button, Text, TouchableOpacity } from "react-native";
+import { styles } from "./styles";
 
-const Button5 = () => {
-  const handleLoginPress = () => {
-    console.log('Đăng nhập được nhấn!');
-  };
 
-  return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.loginButton} onPress={handleLoginPress}>
-        <Text style={styles.buttonText}>Sign Up</Text>
-      </TouchableOpacity>
-    </View>
-  );
+ 
+const Button7 = ({title, onPress}) => {
+    const handlePress = () =>{
+        console.log("Test even button ")
+    }
+return (
+   <TouchableOpacity style = {styles.container} onPress={onPress}>
+    <Text style={styles.textContent}>{title}</Text>
+   </TouchableOpacity>
+);
 };
-
-
-export default React.memo(Button5);
-
+export default React.memo(Button7);

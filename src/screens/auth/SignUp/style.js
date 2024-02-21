@@ -3,15 +3,14 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingTop : 50,
+    paddingTop : 20,
     backgroundColor: 'white',
     height: '100%',
   },
   title1: {
-    fontSize: 25,
+    fontSize: 30,
     fontWeight: 'bold',
     padding: 10,
-    marginTop: 10,
     textAlign: 'center',
     color : 'black',
   },
@@ -20,28 +19,20 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     marginRight: 120,
   },
-  row: {
-    marginTop: 30,
-    justifyContent: 'space-between',
-    marginLeft: 20,
-    width: '100%',
-  },
-  img: {
-    width: '100%',
-    height: 150,
-  },
-  container1 : {
-    flexDirection : 'row',
-  },
-  title2: {
-    fontSize: 15,
-    textDecorationLine : 'underline',
-    fontWeight: 'bold',
-    padding: 10 ,
-    marginTop: 10,
-    marginRight : -19,
-    marginLeft : 90,
-    color : 'black',
+  footerText: {
+    color: '#4F63AC',
+    marginBottom: 56,
     textAlign: 'center',
+  },
+  footerLink: {
+    fontWeight: 'bold',
+  },
+  checkRow : {
+    padding : 10,
+    flexDirection : 'row',
+    alignItems :'center',
+  },
+  checkText : {
+    paddingLeft : 10
   },
 });

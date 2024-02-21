@@ -7,10 +7,9 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
     paddingHorizontal: 8,
     borderRadius: 10,
-    width : '100%',
-    marginTop : 10,
-    paddingTop : 15,
-
+    width : '92%',
+    margin : 15,
+    
   },
   textContent: {
     textAlign: 'center',

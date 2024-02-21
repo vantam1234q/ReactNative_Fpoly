@@ -1,27 +1,49 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useState } from 'react';
 import {styles} from './style';
 import {Button, Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import Input from '../../../components/input1';
 import Button1 from '../../../components/Button1';
 import Button2 from '../../../components/button2';
+import Button7 from '../../../components/button7';
+import Button5 from '../../../components/button5';
+import Button6 from '../../../components/button6';
+import Seperator from '../../../components/Seperator';
+import InputPass from '../../../components/InputPass';
+import CheckBox from '../../../components/CheckBox';
+import GoogleLogin from '../../../components/GoogleLogin';
 
-const SigUp = () => {
+const SigUp = ({navigation}) => {
+  const [checked, setChecked] = useState(false);
+  const onSignIn = () => {
+    navigation.navigate('Sign In');
+  };
+  const onBack = () => {
+    navigation.goBack();
+  };
   return (
     <View style={styles.container}>
       <Text style={[styles.title1, styles.innerTittle]}>
-        Creat your account
+        Creat Your Account
       </Text>
-      <Input placeholder={'Nguyen Van A'} />
-      <Input placeholder={'abc@gmail.com'} />
-      <Input placeholder={'******'} />
-      <Button1 title={'Sign Up'}></Button1>
-      <View style={styles.container1}></View>
-      <Text style={[styles.title1, styles.innerTitleOr]}>OR</Text>
-      <View style={styles.container1}>
-        <Text style={styles.title2}>Already have an account</Text>
-        <Button2 title={"Sign In"}></Button2>
+      <InputPass label={"Name"} placeholder={'Nguyen Van A'} />
+      <InputPass label={"E-mail"} placeholder={'abc@gmail.com'} />
+      <InputPass label={"Password"}  placeholder={'******'} />
+      <View style={styles.checkRow}>
+       <CheckBox checked={checked} onCheck={setChecked}></CheckBox>
+        <Text style={styles.checkText}>I agree with Terms & Privacy</Text>
       </View>
+      <Button1 title={'Sign Up'}></Button1>
+
+      <Seperator text={"Or Sign Up with"}></Seperator>
+      <GoogleLogin/>
+      <Text style={styles.footerText}>
+      Already have an account
+        <Text onPress={onSignIn} style={styles.footerLink}>
+          {' '}
+          Sign In
+        </Text>
+      </Text>
     </View>
   );
 };

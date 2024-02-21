@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { Button, Text, View } from "react-native";
+import { Button, Image, Text, View } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import CustomerDrawer from "../../components/customerDrawer";
+import CustomDrawer from "../../components/CustomerDrawer";
 import Input from "../../components/input";
 
 
@@ -53,12 +53,25 @@ const Lab6 = () => {
     return (<NavigationContainer>
         <Drawer.Navigator 
         screenOptions={{drawerActiveBackgroundColor :'#ccc'}}
-        drawerContent={props => <CustomerDrawer {...props}/>}>
+        drawerContent={props => <CustomDrawer {...props}/>}>
 
-        <Drawer.Screen name="Home" component={HomeScreen}></Drawer.Screen>
-        <Drawer.Screen name="Chat" component={Chat}></Drawer.Screen>
-        <Drawer.Screen name="Setting" component={Setting}></Drawer.Screen>
-        <Drawer.Screen name="Help" component={Help}></Drawer.Screen>
+        <Drawer.Screen name="Home" component={HomeScreen}
+        options={{
+            drawerIcon :() => <Image  style = {{width:30, height : 30}}source={require('../../assets/image/ic_home.png')}></Image>
+        }}
+        ></Drawer.Screen>
+        <Drawer.Screen name="Chat" component={Chat}
+        options={{
+            drawerIcon :() => <Image  style = {{width:30, height : 30}}source={require('../../assets/image/ic_chat.png')}></Image>
+        }}></Drawer.Screen>
+        <Drawer.Screen name="Setting" component={Setting}
+        options={{
+            drawerIcon :() => <Image  style = {{width:30, height : 30}}source={require('../../assets/image/ic_setting.png')}></Image>
+        }}></Drawer.Screen>
+        <Drawer.Screen name="Help" component={Help}
+        options={{
+            drawerIcon :() => <Image  style = {{width:30, height : 30}}source={require('../../assets/image/ic_help.png')}></Image>
+        }}></Drawer.Screen>
         </Drawer.Navigator>
     </NavigationContainer>
     );

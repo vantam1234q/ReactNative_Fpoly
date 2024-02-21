@@ -1,0 +1,14 @@
+{
+  "User": [
+    {
+      "name": "Nguyen Van Tam",
+      "birthday": "03-05-2004",
+      "id": "01"
+    },
+    {
+      "name": "Lam Di Hao",
+      "birthday": "04-04-2004",
+      "id": "02,"
+    }
+  ]
+}
