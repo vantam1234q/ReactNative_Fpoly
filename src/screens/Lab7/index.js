@@ -1,73 +1,54 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
+import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
-import Home from "./HomeScreen";
-import User from "./UserScreen";
-import { Image, View } from "react-native";
-import Setting from "./SettingScreen";
-import { FaLeaf } from "react-icons/fa";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import Icon from 'react-native-vector-icons/Ionicons';
 
-const topTab = createMaterialTopTabNavigator();
-const Tab = createBottomTabNavigator();
-const Lab7 = () => {
-return(
-        <NavigationContainer>
-            <Tab.Navigator 
-            screenOptions={{
-                headerShown: false,
-            }}>
-                <Tab.Screen name="Home" component={Home}
-                options={{
-                tabBarIcon:({forcused}) => {
-                    return(
-                        <View>
-                            <Image
-                             source={require('../../assets/image/ic_home.png')}
-                             resizeMode="contain"
-                             style={{width : 20}}
-                            >
-                            </Image>
-                        </View>
-                    );
-                }
-                }}/>
-                <Tab.Screen name="User" component={User}
-                options={{
-                    tabBarIcon:({forcused}) => {
-                        return(
-                            <View>
-                                <Image
-                                 source={require('../../assets/image/ic_user.png')}
-                                 resizeMode="contain"
-                                 style={{width : 20}}
-                                >
-                                </Image>
-                            </View>
-                        );
-                    }
-                    }}
-                />
-                   <Tab.Screen name="Settung" component={Setting}
-                options={{
-                    tabBarIcon:({forcused}) => {
-                        return(
-                            <View>
-                                <Image
-                                 source={require('../../assets/image/ic_setting.png')}
-                                 resizeMode="contain"
-                                 style={{width : 20}}
-                                >
-                                </Image>
-                            </View>
-                        );
-                    }
-                    }}
-                />
-            </Tab.Navigator>
-        </NavigationContainer>
-)
-};
-    
-export default Lab7;
+
+import Home from "./HomeScreen";
+import Setting from "./SettingScreen";
+import User from "./UserScreen";
+
+const BottomTab = createBottomTabNavigator();
+const TopTab = createMaterialTopTabNavigator();
+
+const TopTabs = () => {
+  return (
+    <TopTab.Navigator style={{marginTop:30}}>
+      <TopTab.Screen name="Home" component={Home} />
+      <TopTab.Screen name="Setting" component={Setting} />
+      <TopTab.Screen name="User" component={User} />
+
+    </TopTab.Navigator>
+  );
+}
+
+const BottomTabs = () => {
+  return (
+    <BottomTab.Navigator
+      screenOptions={({ route }) => ({
+        headerShown: false,
+        tabBarActiveTintColor: '#FF3333',
+        tabBarLabelPosition: 'beside-icon',
+        tabBarLabel: ({ focused, color }) => {
+          return focused ? <Text style={{ color, marginLeft: 20 }}>{route.name}</Text> : null;
+        },
+        tabBarIcon: ({ focused, color, size }) => {
+          const iconName = route.name === 'Home' ? 'home' :
+            route.name === 'Profile' ? 'person' :
+              route.name === 'Favorites' ? 'heart' :
+                route.name === 'Settings' ? 'settings' : '';
+          return <Icon name={iconName} color={color} size={size} />;
+        },
+      })}
+    >
+      <BottomTab.Screen name="Home" component={TopTabs} />
+      <BottomTab.Screen name="Profile" component={TopTabs} />
+      <BottomTab.Screen name="Favorites" component={TopTabs} />
+
+    </BottomTab.Navigator>
+  );
+}
+
+export default BottomTabs;

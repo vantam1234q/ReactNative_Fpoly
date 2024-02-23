@@ -53,4 +53,12 @@ export const products = [
     category: 4,
     price: '$ 1000.00',
   },
+  {
+    id: 7,
+    title: 'Queen Bed',
+    image:
+    'https://cb2.scene7.com/is/image/CB2/DondraQueenBedSHS21_1x1/$web_pdp_main_carousel_xs$/240215084348/dondra-teak-queen-bed.jpg',
+    category: 5,
+    price: '$ 200.00',
+  },
 ];

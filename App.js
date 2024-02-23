@@ -22,7 +22,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Favorite from './src/screens/app/Favorite';
 import Crud from './src/screens/Lab8/CRUD';
 import Product from './src/screens/app/Product';
-
+import BottomTabs from './src/screens/Lab7';
 
 
 
@@ -49,15 +49,15 @@ const App = () => {
     
     // <Lab4 />
 
-      // <NavigationContainer >
-      //   <Stack.Navigator>
-      //     <Stack.Screen name='Splash' component={Splash} />
-      //     <Stack.Screen name='Sign In' component={SigUp} />
-      //     <Stack.Screen name='Sign Up' component={SigIn} />
-      //     <Stack.Screen name='Home' component={Home} />
-      //     <Stack.Screen name='Product' component={Product} />
-      //   </Stack.Navigator>
-      // </NavigationContainer>
+      <NavigationContainer >
+        <Stack.Navigator>
+          <Stack.Screen name='Splash' component={Splash} />
+          <Stack.Screen name='Sign In' component={SigUp} />
+          <Stack.Screen name='Sign Up' component={SigIn} />
+          <Stack.Screen name='Home' component={Home} />
+          <Stack.Screen name='Product' component={Product} />
+        </Stack.Navigator>
+      </NavigationContainer>
 
       // <Lab5 />
 
@@ -72,9 +72,11 @@ const App = () => {
         // <Lab7/>
       // <TopTab></TopTab>
       // <Home></Home>
-    <Crud></Crud>
+    // <Crud></Crud>
       //  <Product></Product>
- 
+//  <NavigationContainer>
+//   <BottomTabs />
+//  </NavigationContainer>
    );
 };
 

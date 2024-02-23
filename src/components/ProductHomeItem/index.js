@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {Pressable, Text, View, Image} from 'react-native';
+import {Pressable, Text, Image} from 'react-native';
 import {styles} from './styles';
 
 const ProductHomeItem = ({title, price, image, onPress,navigation}) => {
