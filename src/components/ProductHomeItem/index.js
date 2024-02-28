@@ -3,9 +3,9 @@ import React from 'react';
 import {Pressable, Text, Image} from 'react-native';
 import {styles} from './styles';
 
-const ProductHomeItem = ({title, price, image, onPress,navigation}) => {
+const ProductHomeItem = ({title, price, image,onPress}) => {
   return (
-    <Pressable onPress={() =>navigation.navigate('Product')} style={styles.container}>
+    <Pressable onPress={onPress} style={styles.container}>
       <Image style={styles.image} source={{uri: image}} />
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.price}>{price}</Text>

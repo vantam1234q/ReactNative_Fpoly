@@ -1,44 +1,64 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import {ScrollView, Text, Image, View, Pressable, Linking} from 'react-native';
+import {styles} from './styles';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import Button from '../../../components/Button';
+import ImageCarousel from '../../../components/ImageCarousel';
 
-const Product = ({ route }) => {
-  const { product } = route.params;
+const ProductDetails = ({route, navigation}) => {
+  const {product} = route?.params || {};
+
+  const onBackPress = () => {
+    navigation.goBack();
+  };
+
+  const onContact = () => {
+    // Make a phone call
+    const phone = '0345712698';
+    Linking.openURL(`tel:${phone}`);
+
+  };
+ 
 
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: product.image }} style={styles.image} />
-      <Text style={styles.title}>{product.title}</Text>
-      <Text style={styles.price}>Price: ${product.price}</Text>
-      <Text style={styles.description}>{product.description}</Text>
-    </View>
+    <SafeAreaView style={styles.safe}>
+      <ScrollView style={styles.container}>
+        {product?.images?.length ? (
+          <ImageCarousel images={product?.images} />
+        ) : (
+          <Image style={styles.image} source={{uri: product?.image}} />
+        )}
+        <View style={styles.content}>
+          <Text style={styles.title}>{product?.title}</Text>
+          <Text style={styles.price}>{product?.price}</Text>
+          <Text style={styles.description}>{product?.description}</Text>
+        </View>
+
+        <Pressable onPress={onBackPress} style={styles.backContainer}>
+          <Image
+            style={styles.backIcon}
+            source={require('../../../assets/image/auth_back.png')}
+          />
+        </Pressable>
+      </ScrollView>
+
+      <View style={styles.footer}>
+        <Pressable style={styles.bookmarkContainer}>
+          <Image
+            style={styles.bookmarkIcon}
+            source={require('../../../assets/image/bookmark-svgrepo-com.png')}
+          />
+        </Pressable>
+        <Button
+          style={styles.btnSpace}
+          onPress={onContact}
+          title="Contact Seller"
+        />
+       
+      </View>
+    </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  image: {
-    width: 200,
-    height: 200,
-    marginBottom: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  price: {
-    fontSize: 18,
-    marginBottom: 10,
-  },
-  description: {
-    fontSize: 16,
-  },
-});
-
-export default Product;
+export default React.memo(ProductDetails);

@@ -23,6 +23,7 @@ import Favorite from './src/screens/app/Favorite';
 import Crud from './src/screens/Lab8/CRUD';
 import Product from './src/screens/app/Product';
 import BottomTabs from './src/screens/Lab7';
+import ProductDetailScreen from './src/screens/app/Product';
 
 
 
@@ -51,11 +52,11 @@ const App = () => {
 
       <NavigationContainer >
         <Stack.Navigator>
-          <Stack.Screen name='Splash' component={Splash} />
-          <Stack.Screen name='Sign In' component={SigUp} />
-          <Stack.Screen name='Sign Up' component={SigIn} />
-          <Stack.Screen name='Home' component={Home} />
-          <Stack.Screen name='Product' component={Product} />
+          <Stack.Screen name='Splash' component={Splash}  options={{headerShown: false}} />
+          <Stack.Screen name='Sign In' component={SigUp}  />
+          <Stack.Screen name='Sign Up' component={SigIn}  />
+          <Stack.Screen name='Home' component={Home} options={{ title: 'Danh sách sản phẩm' } }  />
+          <Stack.Screen name="DetailProduct" component={ProductDetailScreen} options={{ title: 'Chi tiết sản phẩm' }} />
         </Stack.Navigator>
       </NavigationContainer>
 

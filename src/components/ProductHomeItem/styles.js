@@ -19,4 +19,8 @@ export const styles = StyleSheet.create({
     color: '#000000',
     paddingBottom: 8,
   },
+  des: {
+    color: '#000000',
+    paddingBottom: 8,
+  },
 });

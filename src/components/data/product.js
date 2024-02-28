@@ -7,6 +7,7 @@ export const products = [
       'https://grandrapidschair.com/wp-content/uploads/2016/01/250_Brady_Graphite_Honey-1.jpg',
     category: 1,
     price: '$ 20.00',
+    description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
     id: 2,
@@ -15,6 +16,8 @@ export const products = [
       'https://ii1.pepperfry.com/media/catalog/product/f/o/800x880/foldable-table-in-natural-colour-by-clasicraft-foldable-table-in-natural-colour-by-clasicraft-ahmtub.jpg',
     category: 2,
     price: '$ 25.00',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
     id: 3,
@@ -23,6 +26,7 @@ export const products = [
       'https://www.woods-furniture.co.uk/images/products/standard/7706_8118.jpg',
     category: 3,
     price: '$ 45.00',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
   },
   {
     id: 4,
@@ -31,6 +35,7 @@ export const products = [
       'https://cdn.shopify.com/s/files/1/0079/2539/9616/products/myakka-chairs-jalkamal-block-print-footstool-28730051264703_2000x.jpg?v=1629217511',
     category: 3,
     price: '$ 80.00',
+    description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
     id: 5,
@@ -44,6 +49,7 @@ export const products = [
     ],
     category: 4,
     price: '$ 120.00',
+    description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
     id: 6,
@@ -52,13 +58,15 @@ export const products = [
       'https://togiprod.s3.ap-southeast-1.amazonaws.com/originals/ban-lam-viec-chan-chu-x-phong-cach-don-gian-bs005-2-snx1i65ovtfadko.webp',
     category: 4,
     price: '$ 1000.00',
+    description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
     id: 7,
     title: 'Queen Bed',
     image:
-    'https://cb2.scene7.com/is/image/CB2/DondraQueenBedSHS21_1x1/$web_pdp_main_carousel_xs$/240215084348/dondra-teak-queen-bed.jpg',
+      'https://cb2.scene7.com/is/image/CB2/DondraQueenBedSHS21_1x1/$web_pdp_main_carousel_xs$/240215084348/dondra-teak-queen-bed.jpg',
     category: 5,
     price: '$ 200.00',
+    description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ];

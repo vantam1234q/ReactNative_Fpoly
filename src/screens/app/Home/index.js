@@ -1,52 +1,88 @@
 /* eslint-disable prettier/prettier */
-import React, { useEffect, useState } from "react";
-import {styles } from '../../app/Home/styles'
-import { FlatList, SafeAreaView, ScrollView, Text, View } from "react-native";
-import Header from "../../../components/Header";
-import { categories } from "../../../components/data/categories";
-import CategoryBox from "../../../components/CategoryBox";
-import ProductHomeItem from "../../../components/ProductHomeItem";
-import { products } from "../../../components/data/product";
+import React, {useState, useEffect} from 'react';
+import {FlatList, SafeAreaView, View} from 'react-native';
+import {styles} from './styles';
+import { products } from '../../../components/data/product';
+import CategoryBox from '../../../components/CategoryBox';
+import ProductHomeItem from '../../../components/ProductHomeItem';
+import Header from '../../../components/Header';
+import { categories } from '../../../components/data/categories';
 
-const Home = () => {
-  const [keyword, setKeyword] = useState(false);
-  const [filteredProducts, setFilteredProduct] = useState(products);
+
+const Home = ({navigation}) => {
   const [selectedCategory, setSelectedCategory] = useState();
-  console.log('key', keyword);
-  // begin search
+  const [keyword, setKeyword] = useState();
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
   useEffect(() => {
     if (selectedCategory && !keyword) {
-        const updatedProducts = products.filter((product) => product?.category === selectedCategory);
-        setFilteredProduct(updatedProducts);
+      const updatedProducts = products.filter(
+        product => product?.category === selectedCategory,
+      );
+      setFilteredProducts(updatedProducts);
     } else if (selectedCategory && keyword) {
-        const updatedProducts = products.filter((product) => product?.category === selectedCategory && product?.title?.toLowerCase().includes(keyword?.toLowerCase()) );
-        setFilteredProduct(updatedProducts); 
+      const updatedProducts = products.filter(
+        product =>
+          product?.category === selectedCategory &&
+          product?.title?.toLowerCase().includes(keyword?.toLowerCase()),
+      );
+      setFilteredProducts(updatedProducts);
     } else if (!selectedCategory && keyword) {
-        const updatedProducts = products.filter((product) => product?.title?.toLowerCase().includes(keyword?.toLowerCase()) );
-        setFilteredProduct(updatedProducts); 
+      const updatedProducts = products.filter(product =>
+        product?.title?.toLowerCase().includes(keyword?.toLowerCase()),
+      );
+      setFilteredProducts(updatedProducts);
     } else if (!keyword && !selectedCategory) {
-      setFilteredProduct(products);
+      setFilteredProducts(products);
     }
-}, [selectedCategory, keyword])
-  // end search
+  }, [selectedCategory, keyword]);
+
   const renderCategoryItem = ({item, index}) => {
-    return <CategoryBox title={item?.title} image={item?.image}></CategoryBox>;
+    return (
+      <CategoryBox
+        onPress={() => setSelectedCategory(item?.id)}
+        isSelected={item?.id === selectedCategory}
+        isFirst={index === 0}
+        title={item?.title}
+        image={item?.image}
+      />
+    );
   };
+
   const renderProductItem = ({item}) => {
-    return <ProductHomeItem {...item} />;
+    const onProductPress = product => {
+      navigation.navigate('DetailProduct', {product});
+    };
+
+    return <ProductHomeItem onPress={() => onProductPress(item)} {...item} />;
   };
+
   return (
     <SafeAreaView>
-      <ScrollView style={styles.container}>
-      <Header showSearch onSearch={setKeyword} keyword={keyword} title="Find All You Need"
+      <Header
+        showSearch
+        onSearch={setKeyword}
+        keyword={keyword}
+        title="Find All You Need"
       />
-      <FlatList showsHorizontalScrollIndicator={false} style={styles.list}
-        horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) => String(index)}
-      />
+
       <FlatList
-        style={styles.productsList} numColumns={2}  data={filteredProducts} renderItem={renderProductItem} keyExtractor={item => String(item.id)} ListFooterComponent={<View style={{height: 200}} />}
+        showsHorizontalScrollIndicator={false}
+        style={styles.list}
+        horizontal
+        data={categories}
+        renderItem={renderCategoryItem}
+        keyExtractor={(item, index) => String(index)}
       />
-      </ScrollView>
+
+      <FlatList
+        style={styles.productsList}
+        numColumns={2}
+        data={filteredProducts}
+        renderItem={renderProductItem}
+        keyExtractor={item => String(item.id)}
+        ListFooterComponent={<View style={{height: 200}} />}
+      />
     </SafeAreaView>
   );
 };
