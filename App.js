@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useEffect } from 'react';
-import {Image, Text} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import ViewComponent from './src/screens/Lab3React';
 import Lab4 from './src/screens/lab4';
 import Splash from './src/screens/auth/Splash';
@@ -24,61 +24,72 @@ import Crud from './src/screens/Lab8/CRUD';
 import Product from './src/screens/app/Product';
 import BottomTabs from './src/screens/Lab7';
 import ProductDetailScreen from './src/screens/app/Product';
+import Student from './src/components/Student';
 
 
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const App = () => {
-  const WEB_CLIENT_ID =
-    '356032109327-0eka9phlma63uoi7sgenobcgpum7i77n.apps.googleusercontent.com';
-  const IOS_CLIENT_ID =
-    '356032109327-91jiecs7rjmuuupojnjkqspfbcfpq9c9.apps.googleusercontent.com';
-    const isSignedIn = true;
-  useEffect(() => {
-    GoogleSignin.configure({
-      scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
-      webClientId: WEB_CLIENT_ID, // client ID of type WEB for your server (needed to verify user ID and offline access)
-      offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
-      iosClientId: IOS_CLIENT_ID, // [iOS] if you want to specify the client ID of type iOS (otherwise, it is taken from GoogleService-Info.plist)
-    });
-  }, []);
+// const App = () => {
+//   const WEB_CLIENT_ID =
+//     '356032109327-0eka9phlma63uoi7sgenobcgpum7i77n.apps.googleusercontent.com';
+//   const IOS_CLIENT_ID =
+//     '356032109327-91jiecs7rjmuuupojnjkqspfbcfpq9c9.apps.googleusercontent.com';
+//     const isSignedIn = true;
+//   useEffect(() => {
+//     GoogleSignin.configure({
+//       scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
+//       webClientId: WEB_CLIENT_ID, // client ID of type WEB for your server (needed to verify user ID and offline access)
+//       offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
+//       iosClientId: IOS_CLIENT_ID, // [iOS] if you want to specify the client ID of type iOS (otherwise, it is taken from GoogleService-Info.plist)
+//     });
+//   }, []);
   
-  return(
-    // <ViewComponent/>
+//   return(
+//     // <ViewComponent/>
     
-    // <Lab4 />
+//     // <Lab4 />
 
-      <NavigationContainer >
-        <Stack.Navigator>
-          <Stack.Screen name='Splash' component={Splash}  options={{headerShown: false}} />
-          <Stack.Screen name='Sign In' component={SigUp}  />
-          <Stack.Screen name='Sign Up' component={SigIn}  />
-          <Stack.Screen name='Home' component={Home} options={{ title: 'Danh sách sản phẩm' } }  />
-          <Stack.Screen name="DetailProduct" component={ProductDetailScreen} options={{ title: 'Chi tiết sản phẩm' }} />
-        </Stack.Navigator>
-      </NavigationContainer>
+//       <NavigationContainer >
+//         <Stack.Navigator>
+//           <Stack.Screen name='Splash' component={Splash}  options={{headerShown: false}} />
+//           <Stack.Screen name='Sign In' component={SigUp}  />
+//           <Stack.Screen name='Sign Up' component={SigIn}  />
+//           <Stack.Screen name='Home' component={Home} options={{ title: 'Danh sách sản phẩm' } }  />
+//           <Stack.Screen name="DetailProduct" component={ProductDetailScreen} options={{ title: 'Chi tiết sản phẩm' }} />
+//         </Stack.Navigator>
+//       </NavigationContainer>
 
-      // <Lab5 />
+//       // <Lab5 />
 
 
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //    <Stack.Screen name='Lab5' component={Lab5}/>
-    //    <Stack.Screen name='Flex' component={Flex}/>
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-    // <Lab6></Lab6>
-        // <Lab7/>
-      // <TopTab></TopTab>
-      // <Home></Home>
-    // <Crud></Crud>
-      //  <Product></Product>
-//  <NavigationContainer>
-//   <BottomTabs />
-//  </NavigationContainer>
-   );
-};
+//     // <NavigationContainer>
+//     //   <Stack.Navigator>
+//     //    <Stack.Screen name='Lab5' component={Lab5}/>
+//     //    <Stack.Screen name='Flex' component={Flex}/>
+//     //   </Stack.Navigator>
+//     // </NavigationContainer>
+//     // <Lab6></Lab6>
+//         // <Lab7/>
+//       // <TopTab></TopTab>
+//       // <Home></Home>
+//     // <Crud></Crud>
+//       //  <Product></Product>
+// //  <NavigationContainer>
+// //   <BottomTabs />
+// //  </NavigationContainer>
+//    );
+// };
 
-export default App;
+// export default App;
+
+export default function App() {
+  return(
+    <View>
+<Student name="Nguyen Van Tam" address="Quang Nam" phone="034544542121"></Student>
+<Student name="Lam Di Hao" address="Kon Tum" phone="034544542121"></Student>
+<Student name="Nguyen Thanh Binh" address=" Quang Binh" phone="034544542121"></Student>
+    </View>
+  );
+}

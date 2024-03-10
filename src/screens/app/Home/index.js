@@ -19,6 +19,7 @@ const Home = ({navigation}) => {
       const updatedProducts = products.filter(
         product => product?.category === selectedCategory,
       );
+      // chọn từ danh mục
       setFilteredProducts(updatedProducts);
     } else if (selectedCategory && keyword) {
       const updatedProducts = products.filter(
@@ -36,6 +37,7 @@ const Home = ({navigation}) => {
       setFilteredProducts(products);
     }
   }, [selectedCategory, keyword]);
+  // loc danh sach moi khi keyword thay doi
 
   const renderCategoryItem = ({item, index}) => {
     return (
@@ -48,6 +50,7 @@ const Home = ({navigation}) => {
       />
     );
   };
+  // hien thi danh sách từng sp lên màn hình
 
   const renderProductItem = ({item}) => {
     const onProductPress = product => {
@@ -64,6 +67,8 @@ const Home = ({navigation}) => {
         onSearch={setKeyword}
         keyword={keyword}
         title="Find All You Need"
+        style={styles.text  
+        }
       />
 
       <FlatList

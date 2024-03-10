@@ -12,4 +12,7 @@ export const styles = StyleSheet.create({
   productsList: {
     paddingHorizontal: 16,
   },
+  text : {
+    color :'red',
+  }
 });

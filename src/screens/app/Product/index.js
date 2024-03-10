@@ -15,7 +15,7 @@ const ProductDetails = ({route, navigation}) => {
 
   const onContact = () => {
     // Make a phone call
-    const phone = '0345712698';
+    const phone = ' +84 345712698';
     Linking.openURL(`tel:${phone}`);
 
   };

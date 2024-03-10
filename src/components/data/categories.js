@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 export const categories = [
   {
-    title: 'Popular',
-    image:
+    title : 'Popular', 
+    image :
       'https://static8.depositphotos.com/1338574/831/i/600/depositphotos_8318731-stock-photo-gold-star.jpg',
   },
   {
