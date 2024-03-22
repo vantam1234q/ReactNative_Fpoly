@@ -3,14 +3,18 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingTop : 20,
     backgroundColor: 'white',
     height: '100%',
   },
   title1: {
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     padding: 10,
+    textAlign: 'center',
+    color : 'black',
+  },
+  title2: {
+    fontSize: 15,
     textAlign: 'center',
     color : 'black',
   },

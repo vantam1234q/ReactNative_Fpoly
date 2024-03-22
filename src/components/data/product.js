@@ -2,18 +2,18 @@
 export const products = [
   {
     id: 1,
-    title: 'Loft Style Chair',
+    title: 'Hoa giấy',
     image:
-      'https://grandrapidschair.com/wp-content/uploads/2016/01/250_Brady_Graphite_Honey-1.jpg',
+      'https://toquoc.mediacdn.vn/2020/5/29/033be4202ab2b4f4a529d5427e30d714-1590716192874229432992-1590744271738-15907442717392108788979.jpg',
     category: 1,
-    price: '$ 20.00',
+    price: '$ 205.00',
     description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
     id: 2,
     title: 'Wood Mini Table',
     image:
-      'https://ii1.pepperfry.com/media/catalog/product/f/o/800x880/foldable-table-in-natural-colour-by-clasicraft-foldable-table-in-natural-colour-by-clasicraft-ahmtub.jpg',
+      'http://khuonmaucongcnc.com.vn/upload/images/Cay-lan-y.jpg',
     category: 2,
     price: '$ 25.00',
     description:
@@ -23,7 +23,7 @@ export const products = [
     id: 3,
     title: 'Luxe Yellow Armchair',
     image:
-      'https://www.woods-furniture.co.uk/images/products/standard/7706_8118.jpg',
+      'http://khuonmaucongcnc.com.vn/upload/images/chau-cay-ngoc-ngan.jpg',
     category: 3,
     price: '$ 45.00',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
@@ -32,7 +32,7 @@ export const products = [
     id: 4,
     title: 'Cozy Armchair',
     image:
-      'https://cdn.shopify.com/s/files/1/0079/2539/9616/products/myakka-chairs-jalkamal-block-print-footstool-28730051264703_2000x.jpg?v=1629217511',
+      'http://khuonmaucongcnc.com.vn/upload/images/chau-cay-phu-quy-trong-nha.jpg',
     category: 3,
     price: '$ 80.00',
     description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -41,7 +41,7 @@ export const products = [
     id: 5,
     title: 'Velvet Sofa',
     image:
-      'https://www.housingunits.co.uk/media/catalog/product/cache/60968cec045f20fb06ab5f7720001507/5/5/555685b1a8eecf2133f18451526a4ede.jpg',
+      'http://khuonmaucongcnc.com.vn/upload/images/chau-hoa-song-doi.jpg',
     images: [
       'https://collinsandhayes-cdn-1.s3.eu-west-2.amazonaws.com/wp-content/uploads/2022/02/14101256/V7A1199-800x800.jpg',
       'https://www.housingunits.co.uk/media/catalog/product/cache/60968cec045f20fb06ab5f7720001507/5/5/555685b1a8eecf2133f18451526a4ede.jpg',
@@ -51,22 +51,13 @@ export const products = [
     price: '$ 120.00',
     description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
-  {
+  { 
     id: 6,
     title: 'Table Gaming',
     image:
-      'https://togiprod.s3.ap-southeast-1.amazonaws.com/originals/ban-lam-viec-chan-chu-x-phong-cach-don-gian-bs005-2-snx1i65ovtfadko.webp',
+      'http://khuonmaucongcnc.com.vn/upload/images/chau-cay-ngoc-bich.jpeg',
     category: 4,
     price: '$ 1000.00',
-    description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    id: 7,
-    title: 'Queen Bed',
-    image:
-      'https://cb2.scene7.com/is/image/CB2/DondraQueenBedSHS21_1x1/$web_pdp_main_carousel_xs$/240215084348/dondra-teak-queen-bed.jpg',
-    category: 5,
-    price: '$ 200.00',
     description:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ];

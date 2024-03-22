@@ -3,7 +3,6 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingTop : 40,
     backgroundColor: 'white',
     height: '100%',
   },
@@ -12,11 +11,17 @@ export const styles = StyleSheet.create({
     height: 200,
   },
   title: {
-    fontSize: 35,
+    fontSize: 23,
     fontWeight: 'bold',
     padding: 10,
     marginTop: 10,
-    color : 'orange',
+    color : 'black',
+    textAlign: 'center',
+  },
+  title1: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color : 'black',
     textAlign: 'center',
   },
   footerText: {

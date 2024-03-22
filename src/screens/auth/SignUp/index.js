@@ -24,17 +24,19 @@ const SigUp = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={[styles.title1, styles.innerTittle]}>
-        Creat Your Account
+        ĐĂNG KÝ
+      </Text>
+      <Text style={[styles.title2, styles.innerTittle]}>
+       Tạo Tài Khoản
       </Text>
       <InputPass label={"Name"} placeholder={'Nguyen Van A'} />
       <InputPass label={"E-mail"} placeholder={'abc@gmail.com'} />
       <InputPass label={"Password"}  placeholder={'******'} />
-      <View style={styles.checkRow}>
+      {/* <View style={styles.checkRow}>
        <CheckBox checked={checked} onCheck={setChecked}></CheckBox>
         <Text style={styles.checkText}>I agree with Terms & Privacy</Text>
-      </View>
+      </View> */}
       <Button1 title={'Sign Up'}></Button1>
-
       <Seperator text={"Or Sign Up with"}></Seperator>
       <GoogleLogin/>
       <Text style={styles.footerText}>

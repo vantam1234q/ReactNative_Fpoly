@@ -20,7 +20,8 @@ const SigIn = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
-        <Text style={styles.title}>Welcome back !</Text>
+        <Text style={styles.title}>CHÀO MỪNG BẠN</Text>
+        <Text style={styles.title1}>Đăng nhập tài khoản</Text>
         <InputPass label={"E-mail"}  placeholder={"abc@gmai.com"}></InputPass>
         <InputPass label={"Password"} placeholder={"*****"}/>
         <Button1 onPress={() => navigation.navigate('Home')} title={"Log In"}></Button1>

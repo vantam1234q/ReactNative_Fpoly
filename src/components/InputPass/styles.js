@@ -8,22 +8,22 @@ export const styles = StyleSheet.create({
     marginRight : 10,
   },
   label: {
-    marginBottom: 8,
+    marginBottom: 5,
     color: '#4F63AC',
     fontSize: 14,
     fontWeight: '500',
   },
   inputContainer: {
     borderWidth: 2,
-    height : 60,
+    height : 50,
     borderColor: '#8D9BB5',
     borderRadius: 14,
     flexDirection: 'row',
     alignItems: 'center',
   },
   input: {
-    paddingHorizontal: 16,
-    paddingVertical: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
     flex: 1,
   },
   eye: {
